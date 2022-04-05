@@ -26,7 +26,7 @@ public class SCA4TestController {
 	}
 
 	@GetMapping("/redis/{value}")
-	public String redis(@PathVariable String value) throws IOException {
+	public String redis(@PathVariable String value) {
 		return cacheForRedisService.testRedis(value);
 	}
 

@@ -12,7 +12,7 @@ spring:
         resource:
           resource-group: sandbox-rg
       profile:
-        subscription-id: 
+        subscription-id:
   application:
     name: sca4-sample
 

@@ -25,9 +25,9 @@ public class BlobStorageService {
 
 	public String listFilesInCSV() throws IOException {
 		log.info("containerName : " + containerName);
-		Resource[] resources = azureStorageBlobProtocolResolver.getResources("azure-blob://" + containerName + "/*");
+		var resources = azureStorageBlobProtocolResolver.getResources("azure-blob://" + containerName + "/*");
 
-		return Stream.of(resources).map(r -> r.getFilename()).collect(Collectors.joining(","));
+		return Stream.of(resources).map(Resource::getFilename).collect(Collectors.joining(","));
 	}
 
 }
